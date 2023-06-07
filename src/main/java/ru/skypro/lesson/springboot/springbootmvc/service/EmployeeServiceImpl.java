@@ -15,7 +15,12 @@ public class EmployeeServiceImpl implements EmployeeService {
         this.employeeRepository = employeeRepository;
     }
 
-    public List<Employee> getAllEmployees() {
-        return employeeRepository.getAllEmployees();
+
+
+    public Integer getFindAllSalary(){
+        return employeeRepository.getFindAllSalary();
     }
+    public Employee getFindEmployeeWithMinSalary(){ return employeeRepository.getFindEmployeeWithMinSalary(); }
+    public Employee getFindEmployeeWithMaxSalary(){ return employeeRepository.getFindEmployeeWithMaxSalary(); }
+    public List<Employee> getFindEmployeeSalaryMoreThanAverage(){ return employeeRepository.getFindEmployeeSalaryMoreThanAverage(); }
 }
